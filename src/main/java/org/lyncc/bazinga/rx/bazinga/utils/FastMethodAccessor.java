@@ -16,6 +16,8 @@
 
 package org.lyncc.bazinga.rx.bazinga.utils;
 
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import org.objectweb.asm.*;
 
 import java.lang.ref.WeakReference;
