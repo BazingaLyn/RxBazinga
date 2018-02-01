@@ -1,4 +1,4 @@
-package org.lyncc.bazinga.rx.bazinga.jdk8;
+package org.lyncc.bazinga.rx.bazinga.jdk8.sort;
 
 import org.lyncc.bazinga.rx.bazinga.jdk8.predicate.ListFunctionTest.Values;
 

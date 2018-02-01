@@ -1,4 +1,4 @@
-package org.lyncc.bazinga.rx.bazinga.jdk8;
+package org.lyncc.bazinga.rx.bazinga.jdk8.future;
 
 /**
  * 测试类

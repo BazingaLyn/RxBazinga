@@ -1,6 +1,5 @@
 package org.lyncc.bazinga.rx.bazinga.spi;
 
-import org.lgl.core.spi.Spi.Scope;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -56,7 +55,7 @@ public class ExtensionLoader<T> {
 
 		try {
 			Spi spi = type.getAnnotation(Spi.class);
-			if (spi.scope() == Scope.SINGLETON) {
+			if (spi.scope() == Spi.Scope.SINGLETON) {
 				return getSingletonInstance(name);
 			} else {
 				Class<T> clz = extensionClasses.get(name);

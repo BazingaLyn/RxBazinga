@@ -12,7 +12,7 @@ import java.lang.reflect.Method;
 public class Invoker {
 
     @RuntimeType
-    public Object invoke(@Origin Method method, @AllArguments @RuntimeType Object[] args) throws Throwable {
+    public Object invoke(@Origin Method method,@Origin Class clazz, @AllArguments @RuntimeType Object[] args) throws Throwable {
         System.out.println("31321");
         return 111;
     }
