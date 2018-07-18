@@ -1,4 +1,4 @@
-package org.lyncc.bazinga.rx.bazinga.guava;
+package org.lyncc.bazinga.rx.bazinga.guava.juc;
 
 import java.util.concurrent.Callable;
 

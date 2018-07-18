@@ -1,6 +1,8 @@
 package org.lyncc.bazinga.rx.bazinga.jdk8.future;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * complatableFuture
@@ -10,17 +12,33 @@ import java.util.concurrent.CompletableFuture;
  **/
 public class CompletableFutureMain_Base1 {
 
+    private static ExecutorService executors = Executors.newSingleThreadExecutor();
+
     public static void main(String[] args) {
 
-        CompletableFuture<Double> futurPrice = getPriceAsync();
 
-        System.out.println(111);
+        CompletableFuture.runAsync(()->{
 
-        futurPrice.whenComplete(((aDouble, throwable) -> {
-            System.out.println(aDouble);
-        }));
+            try {
+                Thread.sleep(3000l);
+                System.out.println("hello world");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        },executors);
 
-        System.out.println(222);
+
+        System.out.println("hahahda");
+
+//        CompletableFuture<Double> futurPrice = getPriceAsync();
+//
+//        System.out.println(111);
+//
+//        futurPrice.whenComplete(((aDouble, throwable) -> {
+//            System.out.println(aDouble);
+//        }));
+//
+//        System.out.println(222);
 
     }
 

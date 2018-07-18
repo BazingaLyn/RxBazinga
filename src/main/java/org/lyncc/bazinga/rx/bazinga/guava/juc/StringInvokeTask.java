@@ -1,4 +1,4 @@
-package org.lyncc.bazinga.rx.bazinga.guava;
+package org.lyncc.bazinga.rx.bazinga.guava.juc;
 
 /**
  * 字符串执行任务

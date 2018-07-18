@@ -1,10 +1,8 @@
-package org.lyncc.bazinga.rx.bazinga.guava;
+package org.lyncc.bazinga.rx.bazinga.guava.juc;
 
 import com.google.common.util.concurrent.*;
-import io.netty.handler.codec.http.FullHttpResponse;
 
 import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * guava 异步线程服务类

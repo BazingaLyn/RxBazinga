@@ -17,5 +17,7 @@ public class PartitionTest {
 
         // 分区
         Map<Boolean,List<Dish>> partitionedMenu = Dish.menu.stream().collect(partitioningBy(Dish::isVegetarian));
+
+        System.out.println(partitionedMenu);
     }
 }
