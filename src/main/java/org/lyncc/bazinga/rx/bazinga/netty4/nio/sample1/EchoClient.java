@@ -1,4 +1,4 @@
-package org.lyncc.bazinga.rx.bazinga.netty4.nio;
+package org.lyncc.bazinga.rx.bazinga.netty4.nio.sample1;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

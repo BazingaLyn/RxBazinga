@@ -12,9 +12,11 @@ public class OptionalTest {
 
     @Test
     public void test1(){
-        User user = new User("Lyncc");
-        user = Optional.ofNullable(user).orElse(createUser()); //orElse 一定会被执行，但是user如果是null，这执行不会赋值
-//        user = Optional.ofNullable(user).orElseGet(()->createUser());
+        User user = null;
+         Optional.ofNullable(user).ifPresent(user1 -> {
+            System.out.println("hello");
+        }); //orElse 一定会被执行，但是user如果是null，这执行不会赋值
+        user = Optional.ofNullable(user).orElseGet(()->createUser());
         System.out.println(user);
 
     }

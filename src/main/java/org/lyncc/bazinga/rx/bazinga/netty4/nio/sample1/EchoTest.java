@@ -1,7 +1,5 @@
-package org.lyncc.bazinga.rx.bazinga.netty4.nio;
+package org.lyncc.bazinga.rx.bazinga.netty4.nio.sample1;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
