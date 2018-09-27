@@ -1,6 +1,7 @@
 package org.lyncc.bazinga.rx.bazinga.delayqueue.core;
 
-import com.ihomefnt.fgw.delayqueue.model.DelayQueueJob;
+
+import org.lyncc.bazinga.rx.bazinga.delayqueue.model.DelayQueueJob;
 
 import java.util.Map;
 

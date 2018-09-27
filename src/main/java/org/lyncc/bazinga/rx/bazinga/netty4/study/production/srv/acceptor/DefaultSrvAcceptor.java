@@ -1,7 +1,7 @@
 package org.lyncc.bazinga.rx.bazinga.netty4.study.production.srv.acceptor;
 
-import com.lyncc.netty.production.common.NettyEvent;
-import com.lyncc.netty.production.common.ServiceThread;
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.NettyEvent;
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.ServiceThread;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

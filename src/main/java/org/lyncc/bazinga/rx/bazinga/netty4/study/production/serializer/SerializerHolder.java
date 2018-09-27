@@ -1,8 +1,8 @@
 
 package org.lyncc.bazinga.rx.bazinga.netty4.study.production.serializer;
 
-import com.lyncc.netty.production.serializer.protostuff.ProtoStuffSerializer;
 
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.serializer.protostuff.ProtoStuffSerializer;
 
 /**
  * 

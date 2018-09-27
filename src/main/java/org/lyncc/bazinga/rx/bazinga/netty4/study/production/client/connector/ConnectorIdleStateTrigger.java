@@ -1,11 +1,11 @@
 package org.lyncc.bazinga.rx.bazinga.netty4.study.production.client.connector;
 
-import com.lyncc.netty.production.common.Heartbeats;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.timeout.IdleState;
 import io.netty.handler.timeout.IdleStateEvent;
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.Heartbeats;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

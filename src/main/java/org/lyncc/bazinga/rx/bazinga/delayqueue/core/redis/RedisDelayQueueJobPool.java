@@ -2,9 +2,9 @@ package org.lyncc.bazinga.rx.bazinga.delayqueue.core.redis;
 
 import com.alibaba.fastjson.JSON;
 import com.google.common.base.Strings;
-import com.ihomefnt.fgw.delayqueue.core.DelayQueueJobPool;
-import com.ihomefnt.fgw.delayqueue.model.DelayQueueJob;
-import com.ihomefnt.fgw.delayqueue.utils.DelayQueueUtils;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.core.DelayQueueJobPool;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.model.DelayQueueJob;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.utils.DelayQueueUtils;
 import redis.clients.jedis.Jedis;
 import redis.clients.util.Pool;
 

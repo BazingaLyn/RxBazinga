@@ -1,6 +1,5 @@
 package org.lyncc.bazinga.rx.bazinga.netty4.study.production.srv.acceptor;
 
-import com.lyncc.netty.production.common.*;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.*;
@@ -12,6 +11,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
 import io.netty.handler.codec.ReplayingDecoder;
 import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.util.Signal;
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,8 +21,9 @@ import java.util.List;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 
-import static com.lyncc.netty.production.common.NettyCommonProtocol.*;
-import static com.lyncc.netty.production.serializer.SerializerHolder.serializerImpl;
+import static org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.NettyCommonProtocol.*;
+import static org.lyncc.bazinga.rx.bazinga.netty4.study.production.serializer.SerializerHolder.serializerImpl;
+
 
 /**
  * 

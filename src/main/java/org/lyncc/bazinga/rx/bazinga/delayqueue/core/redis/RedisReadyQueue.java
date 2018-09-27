@@ -1,7 +1,7 @@
 package org.lyncc.bazinga.rx.bazinga.delayqueue.core.redis;
 
-import com.ihomefnt.fgw.delayqueue.core.ReadyQueue;
-import com.ihomefnt.fgw.delayqueue.utils.DelayQueueUtils;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.core.ReadyQueue;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.utils.DelayQueueUtils;
 import org.springframework.util.CollectionUtils;
 import redis.clients.jedis.Jedis;
 import redis.clients.util.Pool;

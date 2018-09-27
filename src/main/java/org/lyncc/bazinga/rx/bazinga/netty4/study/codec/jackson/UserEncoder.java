@@ -10,7 +10,7 @@ public class UserEncoder extends MessageToByteEncoder<Object> {
     @Override
     protected void encode(ChannelHandlerContext ctx, Object msg, ByteBuf out) throws Exception {
         ByteBufOutputStream byteBufOutputStream = new ByteBufOutputStream(out);
-        UserMapper.getInstance().writeValue(byteBufOutputStream, msg);
+//        UserMapper.getInstance().writeValue(byteBufOutputStream, msg);
     }
 
 }

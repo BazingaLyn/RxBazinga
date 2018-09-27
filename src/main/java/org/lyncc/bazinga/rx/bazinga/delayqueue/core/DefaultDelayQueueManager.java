@@ -1,14 +1,14 @@
 package org.lyncc.bazinga.rx.bazinga.delayqueue.core;
 
-import com.ihomefnt.fgw.delayqueue.core.redis.RedisDelayBucket;
-import com.ihomefnt.fgw.delayqueue.core.redis.RedisDelayQueueJobPool;
-import com.ihomefnt.fgw.delayqueue.core.redis.RedisReadyQueue;
-import com.ihomefnt.fgw.delayqueue.model.BucketItem;
-import com.ihomefnt.fgw.delayqueue.model.DelayQueueJob;
-import com.ihomefnt.fgw.utils.FgwGlobalExecutorHolder;
+import com.google.common.collect.Lists;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.FgwGlobalExecutorHolder;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.core.redis.RedisDelayBucket;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.core.redis.RedisDelayQueueJobPool;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.core.redis.RedisReadyQueue;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.model.BucketItem;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.model.DelayQueueJob;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.collections.Lists;
 import redis.clients.jedis.Jedis;
 import redis.clients.util.Pool;
 
@@ -20,8 +20,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import static com.ihomefnt.fgw.delayqueue.core.DelayQueueJobResult.FAILEANDRETRY;
-import static com.ihomefnt.fgw.delayqueue.utils.DelayQueueUtils.getPlainIpStr;
+import static org.lyncc.bazinga.rx.bazinga.delayqueue.core.DelayQueueJobResult.FAILEANDRETRY;
+import static org.lyncc.bazinga.rx.bazinga.delayqueue.utils.DelayQueueUtils.getPlainIpStr;
+
 
 /**
  * @author liguolin

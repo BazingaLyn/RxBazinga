@@ -1,6 +1,7 @@
 package org.lyncc.bazinga.rx.bazinga.netty4.study.production.example;
 
-import com.lyncc.netty.production.srv.acceptor.DefaultCommonSrvAcceptor;
+
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.srv.acceptor.DefaultCommonSrvAcceptor;
 
 public class SrvAcceptorStartup {
 	

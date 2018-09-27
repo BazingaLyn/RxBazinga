@@ -1,7 +1,7 @@
 package org.lyncc.bazinga.rx.bazinga.delayqueue.core.redis;
 
-import com.ihomefnt.fgw.delayqueue.core.DelayBucket;
-import com.ihomefnt.fgw.delayqueue.model.BucketItem;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.core.DelayBucket;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.model.BucketItem;
 import org.springframework.util.CollectionUtils;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.Tuple;

@@ -19,7 +19,7 @@ public class UserDecoder<T> extends ByteToMessageDecoder {
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
         ByteBufInputStream byteBufInputStream = new ByteBufInputStream(in);
-        out.add(UserMapper.getInstance().readValue(byteBufInputStream, clazz));
+//        out.add(UserMapper.getInstance().readValue(byteBufInputStream, clazz));
     }
 
 }

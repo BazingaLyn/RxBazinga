@@ -1,7 +1,7 @@
 package org.lyncc.bazinga.rx.bazinga.delayqueue.core;
 
-import com.ihomefnt.fgw.delayqueue.model.BucketItem;
-import com.ihomefnt.fgw.delayqueue.model.DelayQueueJob;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.model.BucketItem;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.model.DelayQueueJob;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

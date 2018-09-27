@@ -1,7 +1,8 @@
 package org.lyncc.bazinga.rx.bazinga.delayqueue.springsupport;
 
-import com.ihomefnt.fgw.delayqueue.core.DelayQueueHandler;
-import com.ihomefnt.fgw.delayqueue.core.DelayQueueManager;
+import com.google.common.base.Strings;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.core.DelayQueueHandler;
+import org.lyncc.bazinga.rx.bazinga.delayqueue.core.DelayQueueManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
@@ -10,7 +11,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
-import org.testng.util.Strings;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

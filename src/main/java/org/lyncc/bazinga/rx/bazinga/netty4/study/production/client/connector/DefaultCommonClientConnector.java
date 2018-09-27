@@ -1,12 +1,5 @@
 package org.lyncc.bazinga.rx.bazinga.netty4.study.production.client.connector;
 
-import com.lyncc.netty.production.ConnectionWatchdog;
-import com.lyncc.netty.production.common.Acknowledge;
-import com.lyncc.netty.production.common.Message;
-import com.lyncc.netty.production.common.NativeSupport;
-import com.lyncc.netty.production.common.NettyCommonProtocol;
-import com.lyncc.netty.production.common.exception.ConnectFailedException;
-import com.lyncc.netty.production.srv.acceptor.AcknowledgeEncoder;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.*;
@@ -17,6 +10,13 @@ import io.netty.handler.codec.MessageToByteEncoder;
 import io.netty.handler.codec.ReplayingDecoder;
 import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.util.HashedWheelTimer;
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.ConnectionWatchdog;
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.Acknowledge;
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.Message;
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.NativeSupport;
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.NettyCommonProtocol;
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.exception.ConnectFailedException;
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.srv.acceptor.AcknowledgeEncoder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,9 +27,10 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static com.lyncc.netty.production.common.NettyCommonProtocol.*;
-import static com.lyncc.netty.production.serializer.SerializerHolder.serializerImpl;
 import static java.util.concurrent.TimeUnit.SECONDS;
+import static org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.NettyCommonProtocol.MAGIC;
+import static org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.NettyCommonProtocol.*;
+import static org.lyncc.bazinga.rx.bazinga.netty4.study.production.serializer.SerializerHolder.serializerImpl;
 
 /**
  * 

@@ -1,6 +1,7 @@
 package org.lyncc.bazinga.rx.bazinga.delayqueue.core;
 
-import com.ihomefnt.fgw.delayqueue.model.BucketItem;
+
+import org.lyncc.bazinga.rx.bazinga.delayqueue.model.BucketItem;
 
 /**
  * 延迟队列的bucket

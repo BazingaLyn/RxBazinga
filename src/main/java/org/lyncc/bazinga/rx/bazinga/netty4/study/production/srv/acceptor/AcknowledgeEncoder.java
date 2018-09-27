@@ -1,14 +1,14 @@
 package org.lyncc.bazinga.rx.bazinga.netty4.study.production.srv.acceptor;
 
-import com.lyncc.netty.production.common.Acknowledge;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.Acknowledge;
 
-import static com.lyncc.netty.production.common.NettyCommonProtocol.ACK;
-import static com.lyncc.netty.production.common.NettyCommonProtocol.MAGIC;
-import static com.lyncc.netty.production.serializer.SerializerHolder.serializerImpl;
+import static org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.NettyCommonProtocol.ACK;
+import static org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.NettyCommonProtocol.MAGIC;
+import static org.lyncc.bazinga.rx.bazinga.netty4.study.production.serializer.SerializerHolder.serializerImpl;
 
 
 /**

@@ -1,16 +1,16 @@
 package org.lyncc.bazinga.rx.bazinga.netty4.study.production.example;
 
-import com.lyncc.netty.production.client.connector.DefaultCommonClientConnector;
-import com.lyncc.netty.production.client.connector.DefaultCommonClientConnector.MessageNonAck;
-import com.lyncc.netty.production.common.Message;
-import com.lyncc.netty.production.srv.acceptor.DefaultCommonSrvAcceptor;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.client.connector.DefaultCommonClientConnector;
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.Message;
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.srv.acceptor.DefaultCommonSrvAcceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.lyncc.netty.production.common.NettyCommonProtocol.REQUEST;
+import static org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.NettyCommonProtocol.REQUEST;
+
 
 /**
  * 
@@ -41,7 +41,7 @@ public class ClientConnectorStartup {
 			}
 		});
 		//防止对象处理发生异常的情况
-		MessageNonAck msgNonAck = new MessageNonAck(message, channel);
+		DefaultCommonClientConnector.MessageNonAck msgNonAck = new DefaultCommonClientConnector.MessageNonAck(message, channel);
 		clientConnector.addNeedAckMessageInfo(msgNonAck);
 	}
 	

@@ -3,7 +3,8 @@ package org.lyncc.bazinga.rx.bazinga.netty4.study.production.common;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 
-import static com.lyncc.netty.production.common.NettyCommonProtocol.*;
+import static org.lyncc.bazinga.rx.bazinga.netty4.study.production.common.NettyCommonProtocol.*;
+
 
 /**
  * 

@@ -1,10 +1,10 @@
 package org.lyncc.bazinga.rx.bazinga.netty4.study.production.serializer.protostuff;
 
-import com.lyncc.netty.production.serializer.Serializer;
 import io.protostuff.LinkedBuffer;
 import io.protostuff.ProtostuffIOUtil;
 import io.protostuff.Schema;
 import io.protostuff.runtime.RuntimeSchema;
+import org.lyncc.bazinga.rx.bazinga.netty4.study.production.serializer.Serializer;
 import org.objenesis.Objenesis;
 import org.objenesis.ObjenesisStd;
 

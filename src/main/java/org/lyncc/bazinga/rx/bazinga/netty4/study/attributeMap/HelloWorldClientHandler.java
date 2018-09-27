@@ -6,7 +6,7 @@ import io.netty.util.Attribute;
 
 import java.util.Date;
 
-import static com.lyncc.netty.attributeMap.AttributeMapConstant.NETTY_CHANNEL_KEY;
+import static org.lyncc.bazinga.rx.bazinga.netty4.study.attributeMap.AttributeMapConstant.NETTY_CHANNEL_KEY;
 
 public class HelloWorldClientHandler extends ChannelInboundHandlerAdapter {
 
