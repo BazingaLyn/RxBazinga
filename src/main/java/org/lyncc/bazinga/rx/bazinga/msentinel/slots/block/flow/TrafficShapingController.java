@@ -1,4 +1,4 @@
-package org.lyncc.bazinga.rx.bazinga.msentinel.slots.block.flow.controller;
+package org.lyncc.bazinga.rx.bazinga.msentinel.slots.block.flow;
 
 import org.lyncc.bazinga.rx.bazinga.msentinel.node.Node;
 

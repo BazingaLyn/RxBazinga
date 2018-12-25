@@ -2,7 +2,10 @@ package org.lyncc.bazinga.rx.bazinga.msentinel.slots.block.flow;
 
 import org.lyncc.bazinga.rx.bazinga.msentinel.log.RecordLog;
 import org.lyncc.bazinga.rx.bazinga.msentinel.slots.block.RuleConstant;
-import org.lyncc.bazinga.rx.bazinga.msentinel.slots.block.flow.controller.TrafficShapingController;
+import org.lyncc.bazinga.rx.bazinga.msentinel.slots.block.flow.controller.DefaultController;
+import org.lyncc.bazinga.rx.bazinga.msentinel.slots.block.flow.controller.RateLimiterController;
+import org.lyncc.bazinga.rx.bazinga.msentinel.slots.block.flow.controller.WarmUpController;
+import org.lyncc.bazinga.rx.bazinga.msentinel.slots.block.flow.controller.WarmUpRateLimiterController;
 import org.lyncc.bazinga.rx.bazinga.msentinel.util.StringUtil;
 
 import java.util.*;
@@ -89,11 +92,20 @@ public class FlowRuleUtil {
         if(rule.getGrade() == RuleConstant.FLOW_GRADE_QPS){
             switch (rule.getControlBehavior()) {
                 case RuleConstant.CONTROL_BEHAVIOR_WARM_UP:
+                    return new WarmUpController(rule.getCount(),
+                                                rule.getWarmUpPeriodSec(),
+                                                ColdFactorProperty.coldFactor);
+                case RuleConstant.CONTROL_BEHAVIOR_RATE_LIMITER:
+                    return new RateLimiterController(rule.getMaxQueueingTimeMs(), rule.getCount());
+                case RuleConstant.CONTROL_BEHAVIOR_WARM_UP_RATE_LIMITER:
+                    return new WarmUpRateLimiterController(rule.getCount(), rule.getWarmUpPeriodSec(),
+                            rule.getMaxQueueingTimeMs(), ColdFactorProperty.coldFactor);
+                case RuleConstant.CONTROL_BEHAVIOR_DEFAULT:
 
             }
         }
 
-        return null;
+        return new DefaultController(rule.getCount(), rule.getGrade());
     }
 
     //TODO
