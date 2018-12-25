@@ -17,7 +17,7 @@ public interface ProcessorSlot<T> {
      * @param priortized
      * @param args
      */
-    void entry(Context context, ResourceWrapper resourceWrapper, T param, int count, boolean priortized, Object... args);
+    void entry(Context context, ResourceWrapper resourceWrapper, T param, int count, boolean priortized, Object... args) throws Throwable;
 
 
     /**
@@ -29,7 +29,7 @@ public interface ProcessorSlot<T> {
      * @param priortized
      * @param args
      */
-    void fireEntry(Context context, ResourceWrapper resourceWrapper, T param, int count, boolean priortized, Object... args);
+    void fireEntry(Context context, ResourceWrapper resourceWrapper, T param, int count, boolean priortized, Object... args) throws Throwable;
 
 
     /**

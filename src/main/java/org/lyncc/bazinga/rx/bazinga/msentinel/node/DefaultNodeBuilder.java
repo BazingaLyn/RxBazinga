@@ -9,6 +9,11 @@ import org.lyncc.bazinga.rx.bazinga.msentinel.slotchain.ResourceWrapper;
 public class DefaultNodeBuilder implements NodeBuilder {
     @Override
     public DefaultNode buildTreeNode(ResourceWrapper id, ClusterNode clusterNode) {
-        return null;
+        return new DefaultNode(id,clusterNode);
+    }
+
+    @Override
+    public ClusterNode buildClusterNode() {
+        return new ClusterNode();
     }
 }

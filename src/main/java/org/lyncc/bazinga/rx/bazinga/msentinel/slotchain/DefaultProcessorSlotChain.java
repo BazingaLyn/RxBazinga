@@ -10,7 +10,7 @@ public class DefaultProcessorSlotChain extends ProcessorSlotChain {
 
     AbstractLinkedProcessorSlot<?> first = new AbstractLinkedProcessorSlot<Object>() {
         @Override
-        public void entry(Context context, ResourceWrapper resourceWrapper, Object param, int count, boolean priortized, Object... args) {
+        public void entry(Context context, ResourceWrapper resourceWrapper, Object param, int count, boolean priortized, Object... args) throws Throwable {
             super.fireEntry(context, resourceWrapper, param, count, priortized, args);
         }
 
@@ -57,7 +57,7 @@ public class DefaultProcessorSlotChain extends ProcessorSlotChain {
      * @param args
      */
     @Override
-    public void entry(Context context, ResourceWrapper resourceWrapper, Object param, int count, boolean priortized, Object... args) {
+    public void entry(Context context, ResourceWrapper resourceWrapper, Object param, int count, boolean priortized, Object... args) throws Throwable {
         first.transformEntry(context, resourceWrapper, param, count, priortized, args);
     }
 

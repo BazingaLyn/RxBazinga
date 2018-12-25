@@ -2,6 +2,7 @@ package org.lyncc.bazinga.rx.bazinga.msentinel;
 
 import org.lyncc.bazinga.rx.bazinga.msentinel.context.Context;
 import org.lyncc.bazinga.rx.bazinga.msentinel.context.NullContext;
+import org.lyncc.bazinga.rx.bazinga.msentinel.node.Node;
 import org.lyncc.bazinga.rx.bazinga.msentinel.slotchain.ProcessorSlotChain;
 import org.lyncc.bazinga.rx.bazinga.msentinel.slotchain.ResourceWrapper;
 
@@ -32,11 +33,16 @@ public class CtEntry extends Entry {
         if(context instanceof NullContext){
             return;
         }
-        this.parent = context.getEntry();
+        this.parent = context.getCurEntry();
         if(null != null){
             ((CtEntry)parent).child = this;
         }
-        context.setEntry(this);
+        context.setCurEntry(this);
+    }
+
+    @Override
+    public Node getLastNode() {
+        return parent == null ? null : parent.getCurNode();
     }
 
     @Override
@@ -49,6 +55,7 @@ public class CtEntry extends Entry {
         exitForContext(context,count,args);
         return parent;
     }
+
 
     protected void exitForContext(Context context, int count, Object... args) {
 

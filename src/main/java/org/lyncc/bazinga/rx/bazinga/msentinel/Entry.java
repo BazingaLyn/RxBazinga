@@ -44,6 +44,8 @@ public abstract class Entry {
 
     protected abstract Entry trueExit(int count,Object... args);
 
+    public abstract Node getLastNode();
+
 
     public long getCreateTime() {
         return createTime;

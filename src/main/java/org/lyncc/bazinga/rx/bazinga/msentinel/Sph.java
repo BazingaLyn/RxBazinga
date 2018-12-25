@@ -1,6 +1,8 @@
 package org.lyncc.bazinga.rx.bazinga.msentinel;
 
 
+import org.lyncc.bazinga.rx.bazinga.msentinel.slots.block.BlockException;
+
 import java.lang.reflect.Method;
 
 /**
@@ -13,5 +15,5 @@ public interface Sph {
 
     Entry entry(Method method);
 
-    Entry entry(String name, EntryType type, int count, Object... args)
+    Entry entry(String name, EntryType type, int count, Object... args) throws BlockException;
 }

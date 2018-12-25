@@ -3,8 +3,18 @@ package org.lyncc.bazinga.rx.bazinga.msentinel.node;
 import org.lyncc.bazinga.rx.bazinga.msentinel.node.metric.MetricNode;
 
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class StatisticNode implements Node {
+
+
+    private AtomicInteger curThreadNum = new AtomicInteger(0);
+
+    @Override
+    public Map<Long, MetricNode> metrics() {
+        return null;
+    }
+
     @Override
     public long totalRequest() {
         return 0;
@@ -78,11 +88,6 @@ public class StatisticNode implements Node {
     @Override
     public long previousPassQps() {
         return 0;
-    }
-
-    @Override
-    public Map<Long, MetricNode> metrics() {
-        return null;
     }
 
     @Override

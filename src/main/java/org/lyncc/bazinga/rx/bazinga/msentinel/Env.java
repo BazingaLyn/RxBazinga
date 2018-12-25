@@ -1,5 +1,6 @@
 package org.lyncc.bazinga.rx.bazinga.msentinel;
 
+import org.lyncc.bazinga.rx.bazinga.msentinel.init.InitExecutor;
 import org.lyncc.bazinga.rx.bazinga.msentinel.node.DefaultNodeBuilder;
 import org.lyncc.bazinga.rx.bazinga.msentinel.node.NodeBuilder;
 
@@ -10,7 +11,10 @@ import org.lyncc.bazinga.rx.bazinga.msentinel.node.NodeBuilder;
 public class Env {
 
     public static final NodeBuilder nodeBuilder = new DefaultNodeBuilder();
-
     public static final Sph sph = new CtSph();
+
+    static {
+        InitExecutor.doInit();
+    }
 
 }

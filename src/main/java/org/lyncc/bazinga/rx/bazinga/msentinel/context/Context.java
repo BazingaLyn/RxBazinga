@@ -2,18 +2,29 @@ package org.lyncc.bazinga.rx.bazinga.msentinel.context;
 
 import org.lyncc.bazinga.rx.bazinga.msentinel.Entry;
 import org.lyncc.bazinga.rx.bazinga.msentinel.node.DefaultNode;
+import org.lyncc.bazinga.rx.bazinga.msentinel.node.Node;
 
 public class Context {
 
     private final String name;
 
-    private DefaultNode defaultNode;
+    private DefaultNode entranceNode;
 
-    private Entry entry;
+    private Entry curEntry;
 
     private String origin = "";
 
     private final boolean async;
+
+
+    public Node getLastNode(){
+        if(curEntry != null && curEntry.getLastNode() != null){
+            return curEntry.getLastNode();
+        }else{
+            return entranceNode;
+        }
+    }
+
 
     public Context(DefaultNode defaultNode,String name){
         this(name, defaultNode, false);
@@ -21,7 +32,7 @@ public class Context {
 
     public Context(String name,DefaultNode defaultNode,boolean async){
         this.name = name;
-        this.defaultNode = defaultNode;
+        this.entranceNode = defaultNode;
         this.async = async;
     }
 
@@ -29,20 +40,20 @@ public class Context {
         return name;
     }
 
-    public DefaultNode getDefaultNode() {
-        return defaultNode;
+    public DefaultNode getEntranceNode() {
+        return entranceNode;
     }
 
-    public void setDefaultNode(DefaultNode defaultNode) {
-        this.defaultNode = defaultNode;
+    public void setEntranceNode(DefaultNode entranceNode) {
+        this.entranceNode = entranceNode;
     }
 
-    public Entry getEntry() {
-        return entry;
+    public Entry getCurEntry() {
+        return curEntry;
     }
 
-    public void setEntry(Entry entry) {
-        this.entry = entry;
+    public void setCurEntry(Entry curEntry) {
+        this.curEntry = curEntry;
     }
 
     public String getOrigin() {
@@ -55,5 +66,10 @@ public class Context {
 
     public boolean isAsync() {
         return async;
+    }
+
+    public Context setCurNode(DefaultNode node) {
+        this.curEntry.setCurNode(node);
+        return this;
     }
 }
