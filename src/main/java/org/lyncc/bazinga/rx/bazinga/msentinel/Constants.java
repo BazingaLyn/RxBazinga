@@ -1,5 +1,6 @@
 package org.lyncc.bazinga.rx.bazinga.msentinel;
 
+import org.lyncc.bazinga.rx.bazinga.msentinel.node.ClusterNode;
 import org.lyncc.bazinga.rx.bazinga.msentinel.node.DefaultNode;
 import org.lyncc.bazinga.rx.bazinga.msentinel.node.EntranceNode;
 import org.lyncc.bazinga.rx.bazinga.msentinel.slotchain.StringResourceWrapper;
@@ -21,6 +22,9 @@ public class Constants {
      * Response time that exceeds TIME_DROP_VALVE will be calculated as TIME_DROP_VALVE.
      */
     public final static int TIME_DROP_VALVE = 4900;
+
+    //TODO
+    public final static ClusterNode ENTRY_NODE = new ClusterNode();
 
     public final static DefaultNode ROOT = new EntranceNode(new StringResourceWrapper(ROOT_ID,EntryType.IN),
             Env.nodeBuilder.buildClusterNode());

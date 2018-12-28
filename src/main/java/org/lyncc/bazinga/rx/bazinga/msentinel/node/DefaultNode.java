@@ -19,6 +19,13 @@ public class DefaultNode extends StatisticNode {
         this.clusterNode = clusterNode;
     }
 
+    public void setClusterNode(ClusterNode clusterNode) {
+        this.clusterNode = clusterNode;
+    }
+
+    public ClusterNode getClusterNode() {
+        return clusterNode;
+    }
 
     public void addChild(DefaultNode node) {
         if(node == null){
@@ -37,8 +44,25 @@ public class DefaultNode extends StatisticNode {
         }
     }
 
+    public ResourceWrapper getResourceWrapper() {
+        return resourceWrapper;
+    }
+
     @Override
     public void increaseThreadNum() {
         super.increaseThreadNum();
+        this.clusterNode.increaseThreadNum();
+    }
+
+    @Override
+    public void addPassRequest() {
+        super.addPassRequest();
+        this.clusterNode.addPassRequest();
+    }
+
+    @Override
+    public void increaseBlockQps() {
+        super.increaseBlockQps();
+        this.clusterNode.increaseBlockQps();
     }
 }
