@@ -1,0 +1,21 @@
+package helloworld
+
+import org.lyncc.bazinga.rx.bazinga.drools.domain.CashFlow;
+import org.lyncc.bazinga.rx.bazinga.drools.domain.Customer;
+import org.lyncc.bazinga.rx.bazinga.drools.domain.Account;
+import org.lyncc.bazinga.rx.bazinga.drools.domain.AccountingPeriod;
+import org.lyncc.bazinga.rx.bazinga.drools.utils.OutputDisplay;
+
+
+global OutputDisplay showResult;
+
+
+rule "Credit rule 2a"
+
+    when
+        $cash :CashFlow($aDate:mvtDate,$no :accountNo,type == CashFlow.CREDIT)
+        $acc:Account(accountno == $no)
+    then
+        $acc.setBalance($acc.getBalance() + $cash.getAmount());
+        showResult.showText("Account no "+$acc.getAccountno()+ " has now a balance of "+$acc.getBalance());
+     end

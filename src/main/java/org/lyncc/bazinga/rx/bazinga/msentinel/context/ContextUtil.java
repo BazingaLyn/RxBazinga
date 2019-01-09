@@ -73,7 +73,9 @@ public class ContextUtil {
                         LOCK.unlock();
                     }
                 }
-
+                context = new Context(node,name);
+                context.setOrigin(origin);
+                contextHolder.set(context);
             }
 
         }

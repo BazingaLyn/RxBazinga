@@ -22,4 +22,7 @@ public final class RuleConstant {
     public static final String LIMIT_APP_DEFAULT = "default";
 
     public static final int DEFAULT_WINDOW_INTERVAL_MS = 1000;
+
+    public static final int DEGRADE_GRADE_RT = 0;
+    public static final int DEGRADE_GRADE_EXCEPTION_RATIO = 1;
 }

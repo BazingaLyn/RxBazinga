@@ -27,6 +27,22 @@ public class ClusterBuilderSlot extends AbstractLinkedProcessorSlot<DefaultNode>
 
     private ClusterNode clusterNode = null;
 
+    public static ClusterNode getClusterNode(String resource) {
+        if(resource == null){
+            return null;
+        }
+
+        ClusterNode clusterNode = null;
+        for (EntryType nodeType : EntryType.values()) {
+            clusterNode = clusterNodeMap.get(new StringResourceWrapper(resource, nodeType));
+            if (clusterNode != null) {
+                break;
+            }
+        }
+
+        return clusterNode;
+    }
+
     /**
      * @param context
      * @param resourceWrapper

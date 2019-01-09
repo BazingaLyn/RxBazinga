@@ -13,14 +13,16 @@ public class DegradeSlot extends AbstractLinkedProcessorSlot<DefaultNode> {
     /**
      * @param context
      * @param resourceWrapper
-     * @param param
+     * @param node
      * @param count
      * @param priortized
      * @param args
      */
     @Override
-    public void entry(Context context, ResourceWrapper resourceWrapper, DefaultNode param, int count, boolean priortized, Object... args) {
+    public void entry(Context context, ResourceWrapper resourceWrapper, DefaultNode node, int count, boolean priortized, Object... args) throws Throwable {
 
+        DegradeRuleManager.checkDegrade(resourceWrapper,context,node,count);
+        fireEntry(context,resourceWrapper,node,count,priortized,args);
     }
 
     /**

@@ -1,0 +1,45 @@
+package helloworld
+
+import org.lyncc.bazinga.rx.bazinga.drools.domain.Account;
+import org.lyncc.bazinga.rx.bazinga.drools.domain.Customer;
+import org.lyncc.bazinga.rx.bazinga.drools.utils.OutputDisplay
+import org.lyncc.bazinga.rx.bazinga.drools.domain.AccountingPeriod;
+import org.lyncc.bazinga.rx.bazinga.drools.domain.CashFlow;
+
+global OutputDisplay showResult;
+
+// 这边表示的一条简单的规则
+rule "my first rule"
+    when
+        Account()
+    then
+        System.out.println("hello my first rule");
+end
+
+
+rule "your first rule revisited with Global"
+
+    when
+        Customer()
+    then
+        System.out.println("hello 2====");
+//        showResult.showText("a customer exists");
+end
+
+
+rule "Your First Rule revisited AccountingPeriod"
+
+	when
+		CashFlow()
+	then
+		showResult.showText("The CashFlow exists, inserting an accounting Period");
+		AccountingPeriod newPeriod = new AccountingPeriod();
+		insert (newPeriod);
+end
+
+rule "Rule on AccountingPeriod that are inserting"
+	when
+		AccountingPeriod ()
+	then
+		showResult.showText("Accounting period exists");
+end
