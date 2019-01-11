@@ -44,6 +44,20 @@
       <version>3.3.0</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.bazinga</groupId>
+      <artifactId>service</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.bazinga</groupId>
+      <artifactId>service-hello</artifactId>
+      <version>1.1-SNAPSHOT</version>
+    </dependency>
+
+
+
     <!--<dependency>-->
       <!--<groupId>org.apache.http</groupId>-->
       <!--<artifactId>httpclient</artifactId>-->
