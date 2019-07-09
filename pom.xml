@@ -39,24 +39,28 @@
     </dependency>
 
     <dependency>
+      <groupId>com.alipay.sofa</groupId>
+      <artifactId>bolt</artifactId>
+      <version>1.4.1</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
       <groupId>org.apache.curator</groupId>
       <artifactId>curator-client</artifactId>
       <version>3.3.0</version>
     </dependency>
 
     <dependency>
-      <groupId>com.bazinga</groupId>
-      <artifactId>service</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.2</version>
     </dependency>
-
-    <dependency>
-      <groupId>com.bazinga</groupId>
-      <artifactId>service-hello</artifactId>
-      <version>1.1-SNAPSHOT</version>
-    </dependency>
-
-
 
     <!--<dependency>-->
       <!--<groupId>org.apache.http</groupId>-->
