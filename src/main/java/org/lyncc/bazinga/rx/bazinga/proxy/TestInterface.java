@@ -6,8 +6,12 @@ package org.lyncc.bazinga.rx.bazinga.proxy;
 public class TestInterface {
 
     public static void main(String[] args) {
-        Test test = DefaultProxyFactory.factory(Test.class).newInstance();
-        Integer result = test.say();
-        System.out.println(result);
+//        Test test = DefaultProxyFactory.factory(Test.class).newInstance();
+//        Integer result = test.say();
+//        System.out.println(result);
+
+        Test test = JDKProxyFactory.factory(Test.class).newInstance();
+        Integer say = test.say();
+        System.out.println(say);
     }
 }

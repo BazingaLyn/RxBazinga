@@ -50,6 +50,10 @@ public enum Proxies {
         return BYTE_BUDDY;
     }
 
+    public static Proxies getJdkProxy() {
+        return JDK_PROXY;
+    }
+
     public <T> T newProxy(Class<T> interfaceType, Object handler) {
         return delegate.newProxy(interfaceType, handler);
     }
