@@ -1,4 +1,4 @@
-package org.lyncc.bazinga.rx.bazinga.algorithm.heap;
+package org.lyncc.bazinga.rx.bazinga.algorithm.answer.heap;
 
 public class MaxHeap<E extends Comparable<E>> {
 

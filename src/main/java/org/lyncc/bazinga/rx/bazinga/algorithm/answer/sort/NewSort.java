@@ -1,4 +1,4 @@
-package org.lyncc.bazinga.rx.bazinga.algorithm.sort;
+package org.lyncc.bazinga.rx.bazinga.algorithm.answer.sort;
 
 import com.alibaba.fastjson.JSON;
 

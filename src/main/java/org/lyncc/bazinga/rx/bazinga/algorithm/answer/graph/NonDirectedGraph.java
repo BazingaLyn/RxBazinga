@@ -1,4 +1,4 @@
-package org.lyncc.bazinga.rx.bazinga.algorithm.graph;
+package org.lyncc.bazinga.rx.bazinga.algorithm.answer.graph;
 
 import java.util.Collection;
 import java.util.LinkedHashMap;
