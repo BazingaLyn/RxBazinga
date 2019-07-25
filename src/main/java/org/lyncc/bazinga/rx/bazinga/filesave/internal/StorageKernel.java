@@ -1,10 +1,10 @@
 package org.lyncc.bazinga.rx.bazinga.filesave.internal;
 
-import cn.thinkinjava.model.DataItem;
-import cn.thinkinjava.model.FileChannelWrapper;
-import cn.thinkinjava.model.Index;
-import cn.thinkinjava.util.IntUtil;
-import cn.thinkinjava.util.LongUtil;
+import org.lyncc.bazinga.rx.bazinga.filesave.model.DataItem;
+import org.lyncc.bazinga.rx.bazinga.filesave.model.FileChannelWrapper;
+import org.lyncc.bazinga.rx.bazinga.filesave.model.Index;
+import org.lyncc.bazinga.rx.bazinga.filesave.util.IntUtil;
+import org.lyncc.bazinga.rx.bazinga.filesave.util.LongUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

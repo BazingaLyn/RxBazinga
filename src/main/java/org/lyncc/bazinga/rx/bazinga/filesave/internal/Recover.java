@@ -1,8 +1,8 @@
 package org.lyncc.bazinga.rx.bazinga.filesave.internal;
 
-import cn.thinkinjava.model.Index;
-import cn.thinkinjava.util.IntUtil;
-import cn.thinkinjava.util.LongUtil;
+import org.lyncc.bazinga.rx.bazinga.filesave.model.Index;
+import org.lyncc.bazinga.rx.bazinga.filesave.util.IntUtil;
+import org.lyncc.bazinga.rx.bazinga.filesave.util.LongUtil;
 
 import java.io.File;
 import java.io.FileNotFoundException;

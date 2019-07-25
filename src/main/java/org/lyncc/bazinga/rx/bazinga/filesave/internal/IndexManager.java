@@ -1,7 +1,7 @@
 package org.lyncc.bazinga.rx.bazinga.filesave.internal;
 
-import cn.thinkinjava.model.Index;
 import lombok.Data;
+import org.lyncc.bazinga.rx.bazinga.filesave.model.Index;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

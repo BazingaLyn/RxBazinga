@@ -1,6 +1,7 @@
 package org.lyncc.bazinga.rx.bazinga.filesave;
 
-import cn.thinkinjava.internal.StorageKernel;
+
+import org.lyncc.bazinga.rx.bazinga.filesave.internal.StorageKernel;
 
 /**
  *

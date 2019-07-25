@@ -1,8 +1,8 @@
 package org.lyncc.bazinga.rx.bazinga.filesave.internal;
 
-import cn.thinkinjava.model.FileChannelWrapper;
-import cn.thinkinjava.util.StringUtil;
 import lombok.Data;
+import org.lyncc.bazinga.rx.bazinga.filesave.model.FileChannelWrapper;
+import org.lyncc.bazinga.rx.bazinga.filesave.util.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
