@@ -10,6 +10,8 @@ import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
  **/
 public class AtomicIntegerFieldUpdaterTest {
 
+    
+
     static class Student {
         private String name;
         public volatile int age;
